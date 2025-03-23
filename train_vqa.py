@@ -13,7 +13,9 @@ import torch.distributed as dist
 
 from models.model_vqa import MUMC_VQA
 from models.vision.vit import interpolate_pos_embed
-from models.tokenization_bert import BertTokenizer
+# from models.tokenization_bert import BertTokenizer
+# Import the tokenizer
+from transformers import BertTokenizer
 import utils
 from dataset.utils import save_result
 from dataset import create_dataset, create_sampler, create_loader, vqa_collate_fn

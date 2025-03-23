@@ -537,3 +537,28 @@ class WordpieceTokenizer(object):
             else:
                 output_tokens.extend(sub_tokens)
         return output_tokens
+
+
+# Debugging: Verify tokenizer initialization
+print("Creating tokenizer...")
+tokenizer = BertTokenizer.from_pretrained(args.text_encoder)
+print("Tokenizer initialized successfully.")
+print(f"Vocabulary size: {tokenizer.vocab_size}")
+
+# Debugging: Test tokenizer with sample input
+sample_text = "Hello, how are you?"
+tokens = tokenizer.tokenize(sample_text)
+input_ids = tokenizer.convert_tokens_to_ids(tokens)
+print("Sample tokens:", tokens)
+print("Sample input IDs:", input_ids)
+
+# Debugging: Verify tokenizer has 'vocab' attribute
+if hasattr(tokenizer, 'vocab'):
+    print("Tokenizer has 'vocab' attribute.")
+else:
+    print("Tokenizer does not have 'vocab' attribute.")
+
+# Debugging: Create model
+print("Creating model...")
+model = MUMC_VQA(config=config, text_encoder=args.text_encoder, text_decoder=args.text_decoder, tokenizer=tokenizer)
+print("Model created successfully.")

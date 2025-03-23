@@ -29,7 +29,7 @@ class vqa_dataset(Dataset):
 
         ann = self.ann[index]
 
-        image_path = os.path.join(self.vqa_root, ann['image_name'])
+        image_path = os.path.join(self.vqa_root, ann['img_name'])
         image = Image.open(image_path).convert('RGB')
         image = self.transform(image)
 

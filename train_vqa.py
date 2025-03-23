@@ -2,7 +2,8 @@ import argparse
 import os
 import sys
 # import ruamel.yaml as yaml
-import ruamel.yaml as YAML
+# import ruamel.yaml as YAML
+from ruamel.yaml as YAML
 import time
 import datetime
 import json

@@ -10,7 +10,7 @@ scipy==1.11.4
 scikit-image==0.22.0
 matplotlib==3.8.2
 scikit-learn>=1.3.1
-google-api-core[grpc]==2.24.2  # Upgraded to resolve conflicts
+google-api-core[grpc]==1.34.1  # Downgraded to resolve google-cloud-automl conflict
 async-timeout<5.0.0,>=4.0.0
 tensorflow==2.17.0
 fsspec==2024.10.0
@@ -19,5 +19,5 @@ cryptography==43.0.0  # Downgraded to resolve pydrive2 conflict
 pyOpenSSL==24.2.1  # Downgraded to resolve pydrive2 conflict
 notebook==6.5.5  # Downgraded to resolve google-colab conflict
 pandas==2.2.2  # Downgraded to resolve google-colab conflict
-rmm-cu12==25.2.0  # Upgraded to resolve CUDA-related conflicts
-pylibraft-cu12==25.2.0  # Upgraded to resolve CUDA-related conflicts
+rmm-cu12==24.10.0  # Downgraded to resolve pylibcugraph-cu12 conflict
+pylibraft-cu12==24.10.0  # Downgraded to resolve pylibcugraph-cu12 conflict

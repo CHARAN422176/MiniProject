@@ -1,13 +1,10 @@
 # each train_file (json) contains a python list where each item is {'image': img_path, 'caption': text or list_of_text }
 train_file: [
-    '/mnt/sda/lpf/data/medical/medical_image_caption/medicat/medicat_full.json',
-    '/mnt/sda/lpf/data/medical/medical_image_caption/clef2022/clef2022_train.json',
-    '/mnt/sda/lpf/data/medical/medical_image_caption/clef2022/clef2022_val.json',
-    '/mnt/sda/lpf/data/medical/medical_image_caption/roco/roco_train.json',
-    '/mnt/sda/lpf/data/medical/medical_image_caption/roco/roco_val.json',
-    '/mnt/sda/lpf/data/medical/medical_image_caption/roco/roco_test.json',
+    /kaggle/input/slakemedvqa/Slake1.0/test.json
+    /kaggle/input/slakemedvqa/Slake1.0/train.json
+    /kaggle/input/slakemedvqa/Slake1.0/validate.json
 ]
-image_root: '/mnt/sda/lpf/data/medical/medical_image_caption/'
+image_root: '/kaggle/input/slakemedvqa/Slake1.0/imgs'
 
 text_config: 'bert-base-uncased'
 bert_config: 'configs/config_bert.json'

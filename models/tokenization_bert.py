@@ -14,7 +14,6 @@
 # limitations under the License.
 """Tokenization classes for Bert."""
 
-
 import collections
 import os
 import unicodedata
@@ -22,7 +21,6 @@ from typing import List, Optional, Tuple
 
 from transformers.tokenization_utils import PreTrainedTokenizer, _is_control, _is_punctuation, _is_whitespace
 from transformers.utils import logging
-
 
 logger = logging.get_logger(__name__)
 
@@ -93,7 +91,6 @@ PRETRAINED_INIT_CONFIGURATION = {
     "wietsedv/bert-base-dutch-cased": {"do_lower_case": False},
 }
 
-
 def load_vocab(vocab_file):
     """Loads a vocabulary file into a dictionary."""
     vocab = collections.OrderedDict()
@@ -104,7 +101,6 @@ def load_vocab(vocab_file):
         vocab[token] = index
     return vocab
 
-
 def whitespace_tokenize(text):
     """Runs basic whitespace cleaning and splitting on a piece of text."""
     text = text.strip()
@@ -112,7 +108,6 @@ def whitespace_tokenize(text):
         return []
     tokens = text.split()
     return tokens
-
 
 class BertTokenizer(PreTrainedTokenizer):
     r"""

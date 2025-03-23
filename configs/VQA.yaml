@@ -13,7 +13,7 @@ slake:
   train_file: [ '/kaggle/input/slakemedvqa/Slake1.0/train.json',
                 '/kaggle/input/slakemedvqa/Slake1.0/validate.json' ]
   test_file: [ '/kaggle/input/slakemedvqa/Slake1.0/test.json' ]
-  answer_list: '/mnt/sda/lpf/data/vqa/data_Slake/en/answer_trainval_list.json'
+  answer_list: '/kaggle/input/slakemedvqa/Slake1.0/train.json'
   vqa_root: '/kaggle/input/slakemedvqa/Slake1.0/imgs'  # slake
 med2019:
   train_file: [ '/mnt/sda/lpf/data/vqa/vqa_med/2019/vqa_med_2019_train.json',

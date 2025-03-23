@@ -3,7 +3,7 @@ import os
 import sys
 # import ruamel.yaml as yaml
 # import ruamel.yaml as YAML
-from ruamel.yaml as YAML
+from ruamel.yaml import YAML
 import time
 import datetime
 import json

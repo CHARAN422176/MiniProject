@@ -138,9 +138,15 @@ if __name__ == '__main__':
     args = parser.parse_args()
 
     # config = yaml.safe_load(open(args.config, 'r'))
-    yaml = YAML(typ='safe', pure=True)
+
+    # yaml = YAML(typ='safe', pure=True)
+    # with open(args.config, 'r') as file:
+    #     config = yaml.load(file)
+
+    # Load YAML configuration
+    yaml_loader = YAML(typ='safe', pure=True)
     with open(args.config, 'r') as file:
-        config = yaml.load(file)
+        config = yaml_loader.load(file)
     args.output_dir = os.path.join(args.output_dir, datetime.datetime.strftime(datetime.datetime.now(), '%Y-%m-%d_%H-%M'))
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)
 

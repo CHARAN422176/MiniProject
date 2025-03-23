@@ -1,8 +1,8 @@
 # each train_file (json) contains a python list where each item is {'image': img_path, 'caption': text or list_of_text }
 train_file: [
-    /kaggle/input/slakemedvqa/Slake1.0/test.json
-    /kaggle/input/slakemedvqa/Slake1.0/train.json
-    /kaggle/input/slakemedvqa/Slake1.0/validate.json
+    '/kaggle/input/slakemedvqa/Slake1.0/test.json',
+    '/kaggle/input/slakemedvqa/Slake1.0/train.json',
+    '/kaggle/input/slakemedvqa/Slake1.0/validate.json',
 ]
 image_root: '/kaggle/input/slakemedvqa/Slake1.0/imgs'
 

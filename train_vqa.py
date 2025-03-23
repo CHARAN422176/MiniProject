@@ -1,7 +1,8 @@
 import argparse
 import os
 import sys
-import ruamel.yaml as yaml
+# import ruamel.yaml as yaml
+import ruamel.yaml as YAML
 import time
 import datetime
 import json
@@ -218,7 +219,12 @@ if __name__ == '__main__':
 
     args.output_dir = '/mnt/sda/lpf/weights/output/V2/vqa/' + args.dataset_use + args.output_suffix
 
-    config = yaml.load(open('./configs/VQA.yaml', 'r'), Loader=yaml.Loader)
+    # config = yaml.load(open('./configs/VQA.yaml', 'r'), Loader=yaml.Loader)
+
+    # Load the YAML configuration
+    yaml = YAML(typ='rt')  # Use 'rt' for round-trip loading
+    with open('./configs/VQA.yaml', 'r') as file:
+        config = yaml.load(file)
 
     args.result_dir = os.path.join(args.output_dir, 'result')
     Path(args.output_dir).mkdir(parents=True, exist_ok=True)

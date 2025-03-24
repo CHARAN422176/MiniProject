@@ -65,7 +65,13 @@ def evaluation(model, data_loader, device, config):
 
     result = []
 
-    answer_list = [answer + config['eos'] for answer in data_loader.dataset.answer_list]
+    # answer_list = [answer['answer'] + config['eos'] for answer in data_loader.dataset.answer_list]
+    answer_list = []
+    for answer in data_loader.dataset.answer_list:
+        if isinstance(answer, dict):
+            answer_list.append(answer['answer'] + config['eos'])
+        else:
+            answer_list.append(answer + config['eos'])
 
     for n, (image, question, question_id) in enumerate(metric_logger.log_every(data_loader, print_freq, header)):
         image = image.to(device, non_blocking=True)

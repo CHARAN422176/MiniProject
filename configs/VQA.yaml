@@ -23,7 +23,7 @@ med2019:
   vqa_root: '/mnt/sda/lpf/data/vqa/vqa_med/2019/images/'
 
 image_res: 384      # 480  384  256
-batch_size_train: 16
+batch_size_train: 4
 batch_size_test: 2
 k_test: 128
 
